@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecovida</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(180deg, #e8f5e9, #c8e6c9);
+    color: #1b5e20;
+    text-align: center;
+  }
+
+  header {
+    background: linear-gradient(90deg, #2e7d32, #81c784);
+    color: white;
+    padding: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  nav {
+    background-color: #388e3c;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  nav button {
+    background-color: #a5d6a7;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #1b5e20;
+    transition: 0.3s;
+  }
+
+  nav button:hover {
+    background-color: #81c784;
+    transform: scale(1.05);
+  }
+
+  section {
+    display: none;
+    padding: 40px 20px;
+    animation: fadeIn 0.6s ease;
+  }
+
+  section.active {
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  img {
+    width: 80%;
+    max-width: 500px;
+    border-radius: 12px;
+    margin: 25px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  }
+
+  p {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .btn {
+    background-color: #43a047;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+  }
+
+  .btn:hover {
+    background-color: #66bb6a;
+    transform: scale(1.05);
+  }
+
+  footer {
+    background: #2e7d32;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 15px;
+  }
+</style>
+</head>
+<body>
+
+<header>EᑕOᐯIᗪᗩ - ᑌᑎIᗪOᔕ ᑭOᖇ ᑌᑎ ᑭᒪᗩᑎETᗩ ᗰEᒍOᖇ</header>
+
+<nav>
+  <button onclick="mostrar('inicio')">Inicio</button>
+  <button onclick="mostrar('reciclaje')">Reciclaje</button>
+  <button onclick="mostrar('energia')">Energía</button>
+  <button onclick="mostrar('comunidad')">Comunidad</button>
+</nav>
+
+<section id="inicio" class="active">
+  <h2>Bienvenido a EcoVida 🌿</h2>
+  <p>
+    En EcoVida creemos que cada persona tiene el poder de cambiar el mundo desde sus acciones diarias.
+    Cuidar del medio ambiente no es solo una opción, es una necesidad. 
+  </p>
+  <p>
+    Nuestra misión es inspirarte a adoptar hábitos sostenibles, reducir el consumo innecesario y conectar nuevamente con la naturaleza.
+    A través de la educación y la conciencia, podemos lograr un planeta más limpio y equilibrado.
+  </p>
+  <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80" alt="Naturaleza EcoVida">
+  <button class="btn" onclick="alert('¡Gracias por unirte a EcoVida! 💚')">💚 Unirme</button>
+</section>
+
+<section id="reciclaje">
+  <h2>Reciclaje Responsable ♻️</h2>
+  <p>
+    El reciclaje comienza en casa. Separar los residuos ayuda a reducir la contaminación y a reutilizar materiales que aún pueden tener una segunda vida.
+  </p>
+  <p>
+    Es importante clasificar los desechos correctamente: plásticos, papel, vidrio y orgánicos.
+    Al hacerlo, estás contribuyendo a que menos basura termine en los océanos y bosques.
+  </p>
+  <img src="https://images.unsplash.com/photo-1565373677458-4e4f28e6a8a1?auto=format&fit=crop&w=900&q=80" alt="Reciclaje">
+  <p>
+    Recuerda: “El mejor residuo es el que no se genera”. Reutiliza lo que puedas, dona lo que no uses y compra de forma consciente.
+  </p>
+</section>
+
+<section id="energia">
+  <h2>Energía Limpia </h2>
+  <p>
+    El uso de energías renovables es clave para un futuro sostenible. La energía solar, eólica e hidráulica son alternativas limpias que no dañan el planeta.
+  </p>
+  <p>
+    Pequeños gestos, como apagar las luces que no utilizas, desconectar aparatos y aprovechar la luz natural,
+    pueden reducir significativamente el consumo energético.
+  </p>
+  <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=900&q=80" alt="Energía renovable">
+  <p>
+    El cambio comienza con la conciencia
+  </p>
+</section>
+
+<section id="comunidad">
+  <h2>Comunidad Verde 🌱</h2>
+  <p>
+    EcoVida es una comunidad comprometida con el medio ambiente. Promovemos actividades como siembras de árboles,
+    limpiezas de ríos y talleres de sostenibilidad en escuelas.
+  </p>
+  <p>
+    Te invitamos a ser parte del movimiento verde: comparte tus ideas, inspira a otros y demuestra que el cambio es posible cuando trabajamos juntos.
+  </p>
+  <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=900&q=80" alt="Comunidad ecológica">
+  <button class="btn" onclick="alert('¡Gracias por ser parte de la comunidad EcoVida! 🌿')">💬 Participar</button>
+</section>
+
+<footer>
+  EcoVida - YERLI ROJAS Y DANNA ROJAS 🌿  
+</footer>
+
+<script>
+function mostrar(id) {
+  document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+}
+</script>
+
+</body>
+</html>
